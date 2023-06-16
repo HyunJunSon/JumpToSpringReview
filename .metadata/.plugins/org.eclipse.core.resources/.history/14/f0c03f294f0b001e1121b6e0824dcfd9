@@ -1,0 +1,12 @@
+package com.mysite.sbb.question;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class QuestionService {
+	
+	private final QuestionRepository questionRepository;
+}

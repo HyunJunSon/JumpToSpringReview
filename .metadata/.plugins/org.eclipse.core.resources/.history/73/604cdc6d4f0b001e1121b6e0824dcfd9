@@ -1,0 +1,30 @@
+package com.mysite.sbb.question;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+class QuestionController {
+
+	private final QuestionRepository questionRepository;
+	
+    @GetMapping("/question/list")
+    public String list(Model model) {
+    	
+    	model.addAttribute("questionList", this.questionRepository.findAll());
+    	
+        return "question_list";
+    }
+    
+    @GetMapping("/question/leaf")
+    public String list2(Model model) {
+    	
+    	model.addAttribute("questionList", this.questionRepository.findAll());
+    	
+    	return "leafTest";
+    }
+}

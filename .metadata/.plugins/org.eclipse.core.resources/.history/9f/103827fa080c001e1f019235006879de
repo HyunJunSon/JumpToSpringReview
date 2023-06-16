@@ -1,0 +1,29 @@
+package com.mysite.sbb.question;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class QuestionService {
+	
+	private final QuestionRepository questionRepository;
+	
+	public List<Question> getList() {
+		return this.questionRepository.findAll();
+	}
+	
+	public Question findById(int id) {
+		Optional<Question> op =  this.questionRepository.findById(id);
+		if (op.isPresent()) {
+			return op.get();
+		}
+		return null;
+	}
+	
+	
+}

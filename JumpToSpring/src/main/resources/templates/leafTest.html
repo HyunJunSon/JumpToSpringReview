@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Iteration</th>
+            <th>Question</th>
+            <th>Is First?</th>
+            <th>Is Last?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="question, loop : ${questionList}">
+            <td th:text="${loop.index}"></td>
+            <td th:text="${question}"></td>
+            <td th:text="${loop.first}"></td>
+            <td th:text="${loop.last}"></td>
+        </tr>
+    </tbody>
+</table>

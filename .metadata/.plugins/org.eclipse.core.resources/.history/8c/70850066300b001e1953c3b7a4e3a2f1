@@ -1,0 +1,16 @@
+package com.mysite.sbb.user;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HelloControll {
+
+	@ResponseBody
+	@GetMapping("question/list")
+	public String hello() {
+		
+		return "hello Spring boots Board";
+	}
+}
