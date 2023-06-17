@@ -18,7 +18,7 @@ import lombok.Setter;
 @Entity
 public class Answer {
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@Column(columnDefinition = "TEXT")
 	private String content;
